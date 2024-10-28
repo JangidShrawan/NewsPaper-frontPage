@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="./src/js/script.js" defer></script>
+  <title>Frontend Mentor | News homepage</title>
+</head>
+<body class="bg-offWhite relative">
+  <!-- Navbar -->
+  <nav class="container max-w-7xl px-6 mt-3 py-4 hidden md:flex md:justify-between md:items-center md:px-20 md:py-8 md:mt-6 mx-auto">
+    <div>
+      <img src="./src/images/logo.svg" alt="">
+    </div>
+    <ul class="flex items-center space-x-10 text-darkGrayishBlue">
+      <li class="hover:text-softRed duration-200"><a href="#">Home</a></li>
+      <li class="hover:text-softRed duration-200"><a href="#new">New</a></li>
+      <li class="hover:text-softRed duration-200"><a href="#popular">Popular</a></li>
+      <li class="hover:text-softRed duration-200"><a href="#">Trending</a></li>
+      <li class="hover:text-softRed duration-200"><a href="#">Categories</a></li>
+    </ul>
+  </nav>
+  <!-- Mobo menu -->
+  <header class="px-6 py-4 flex my-6 justify-between items-center z-20 md:hidden">
+    <img src="./src/images/logo.svg" alt="" class="w-10 h-6">
+    <button id="mobo-menu-open"><img src="./src/images/icon-menu.svg" alt="" class="h-4 w-7"></button>
+  </header>
+
+
+  <div id="mobo-menu" class="absolute hidden md:hidden top-0 min-h-screen left-1/4 right-0 bg-white z-40 px-6 py-6">
+    <div class="mb-32 flex items-end justify-end">
+      <button id="mobo-menu-close" class="cursor-pointer">
+        <img src="./src/images/icon-menu-close.svg" alt="">
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-4 pl-3 text-lg">
+      <a href="#" class="hover:text-softRed duration-150">Home</a>
+      <a href="#new" class="hover:text-softRed duration-150">New</a>
+      <a href="#popular" class="hover:text-softRed duration-150">Popular</a>
+      <a href="#" class="hover:text-softRed duration-150">Trending</a>
+      <a href="#" class="hover:text-softRed duration-150">Categories</a
+    </nav>
+  </div>
+
+
+  
+  <!-- Main -->
+  <main class="container px-6 mt-3 md:mt-8 md:px-20 pb-6 md:pb-24 max-w-7xl mx-auto">
+    <section id="hero" class="grid grid-cols-1 grid-rows-3 md:grid-rows-2 md:grid-cols-3 gap-x-8 gap-y-6">
+      <div class="bg-hero-mobile bg-center md:bg-hero-desktop bg-cover bg-no-repeat w-full md:col-span-2">
+        <!-- Ensure the background image fills the area on mobile and desktop -->
+      </div>
+      <!-- Hero content container positioned below the image -->
+      <div class="flex flex-col justify-center items-center space-y-6 md:mt-0 md:flex-row md:space-y-0 md:space-x-10 bg-white md:col-span-2">
+        <h2 class="font-extrabold text-3xl md:text-4xl lg:text-5xl md:my-4">The Bright Future of Web 3.0?</h2>
+        <div>
+          <p class="text-darkGrayishBlue">
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?
+          </p>
+          <button class="mt-4 px-8 py-3 bg-softRed text-black font-semibold capitalize hover:text-white hover:shadow-md cursor-pointer tracking-wide duration-200 hover:bg-black">
+            READ MORE
+          </button>
+        </div>
+      </div>
+    
+      <!-- Right side: Sidebar content -->
+      <div id="new" class="bg-black p-5 py-6 mx-auto md:mx-0 mt-8 md:mt-0 md:row-span-2 md:row-start-1 md:col-start-3">
+        <h3 class="font-bold text-softOrange text-xl mb-4">New</h3>
+        <div class="flex flex-col space-y-4">
+          <div class="pb-4 border-b border-b-grayishBlue">
+            <h4 class="font-bold text-white hover:text-softOrange mb-1 duration-150">Hydrogen VS Electric Cars</h4>
+            <p class="text-white font-light">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="py-4 border-b border-b-grayishBlue">
+            <h4 class="font-bold text-white hover:text-softOrange mb-1 duration-150">The Downsides of AI Artistry</h4>
+            <p class="text-white font-light">What are the possible adverse effects of on-demand AI image generation?</p>
+          </div>
+          <div class="pt-4">
+            <h4 class="font-bold text-white hover:text-softOrange mb-1 duration-150">Is VC Funding Drying Up?</h4>
+            <p class="text-white font-light">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="popular">
+      <div class="mx-auto mt-10 w-full md:mt-16 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:justify-between">
+        <!-- Item-1 -->
+        <div class="flex items-stretch space-x-6 mx-auto md:mx-0">
+          <img src="./src/images/image-retro-pcs.jpg" alt="retro pics img" loading="lazy" class="w-20 h-28">
+          <div class="max-w-[250px] my-1">
+            <p class="text-xl font-semibold text-softRed">01</p>
+            <h4 class="my-1 font-bold">Reviving Retro PCs</h4>
+            <p class="text-darkGrayishBlue">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <!-- Item-2 -->
+        <div class="flex items-stretch space-x-6 mx-auto md:mx-0">
+          <img src="./src/images/image-top-laptops.jpg" alt="laptop img" loading="lazy" class="w-20 h-28">
+          <div class="max-w-[250px] my-1">
+            <p class="text-xl font-semibold text-softRed">02</p>
+            <h4 class="my-1 font-bold">Top 10 Laptops of 2022</h4>
+            <p class="text-darkGrayishBlue">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <!-- Item-3 -->
+        <div class="flex items-stretch space-x-6 mx-auto md:mx-0">
+          <img src="./src/images/image-gaming-growth.jpg" alt="gaming growth img" loading="lazy" class="w-20 h-28">
+          <div class="max-w-[250px] my-1">
+            <p class="text-xl font-semibold text-softRed">03</p>
+            <h4 class="my-1 font-bold">The Growth of Gaming</h4>
+            <p class="text-darkGrayishBlue">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
